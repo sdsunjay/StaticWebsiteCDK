@@ -1,7 +1,10 @@
+.DS_Store
+.idea
 *.js
 !jest.config.js
 *.d.ts
 node_modules
+cdk.context.json
 
 # CDK asset staging directory
 .cdk.staging
