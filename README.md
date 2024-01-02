@@ -11,9 +11,9 @@ The CDK script in this project sets up the following AWS resources:
   - **Log Bucket**: Stores access logs from both the website bucket and the CloudFront distribution.
 - **Amazon CloudFront Distribution**: Provides a content delivery network (CDN) service that securely delivers data to users with low latency and high transfer speeds.
 - **AWS Certificate Manager (ACM) Certificate**: Provides an SSL/TLS certificate for the website's domain and its `www` subdomain.
-- **Amazon Route 53**: 
+- **Amazon Route 53**:
   - Creates a DNS record in [existing Hosted Zone](https://github.com/sdsunjay/HostedZoneCDK) that points to the CloudFront distribution.
-  - Creates a DNS record that points from `www.<domain name>.com` to `<domain name>.com` record 
+  - Creates a DNS record that points from `www.<domain name>.com` to `<domain name>.com` record
 - **AWS Identity and Access Management (IAM)**: Sets up the necessary permissions for CloudFront to access the S3 bucket.
 - **AWS CloudWatch**: Optionally integrated for monitoring and logging.
 
@@ -54,7 +54,8 @@ After deployment, the static website will be accessible via your custom domain i
 - The `cdk.json` file tells the CDK Toolkit how to execute your app.
 - **Domain Name Reminder**: If your domain name is registered outside of AWS, make sure to update the Nameservers to point to the AWS Route 53 Nameservers. This change is **crucial** for your domain to resolve correctly to the AWS resources.
 
-## Security 
+## Security
+
 - The website bucket has public read access blocked.
 - The log bucket has public access blocked and is encrypted.
 - CloudFront uses an SSL certificate from ACM and enforces HTTPS.
@@ -64,7 +65,7 @@ After deployment, the static website will be accessible via your custom domain i
 - `npm run build` compile typescript to js
 - `npm run watch` watch for changes and compile
 - `npm run test` perform the jest unit tests
-- `cdk deploy` deploy this stack to your default AWS account/region 
+- `cdk deploy` deploy this stack to your default AWS account/region
 - `cdk diff` compare deployed stack with current state
 - `cdk synth` emits the synthesized CloudFormation template
 

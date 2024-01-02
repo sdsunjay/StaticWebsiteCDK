@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 Not Found</title>
+  <style>
+        body {
+            text-align: center;
+            padding: 40px;
+            font-family: 'Arial', sans-serif;
+            background-color: #fdfdfd;
+            color: #333;
+        }
+
+        h1 {
+            color: #e94949;
+            font-size: 80px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            background-color: #e94949;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #fa5a5a;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+  <h1>404</h1>
+  <p>Oops! The page you're looking for can't be found.</p>
+  <p id="result"> </p>
+  <a href="index.html" class="btn">Go Home</a>
+</div>
+
+<script>
+      function redirect () {
+         setTimeout(myURL, 5000);
+         var result = document.getElementById("result");
+         result.innerHTML = "<b> The page will redirect after delay of 5 seconds";
+      }
+
+      function myURL() {
+         document.location.href = 'index.html';
+      }
+</script>
+</body>
+</html>
